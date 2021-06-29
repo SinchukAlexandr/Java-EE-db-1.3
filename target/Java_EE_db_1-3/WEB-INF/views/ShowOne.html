@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Show One</title>
+    <link th:href="@{/css/styleNewAndUpdatePage.css}" rel="stylesheet"/>
+</head>
+<body>
+<form th:method="PATCH" th:action="@{/employee/{id}(id=${oneOfStaff.getId()})}" th:object="${oneOfStaff}">
+    <div class='center'>
+    <p><label for="name">ФИО</label>
+    <input type="text" th:field="*{name}" id="name"/></p>
+
+    <p><label for="login">Логин</label>
+    <input type="text" th:field="*{login}" id="login"/></p>
+
+    <p><label for="password">Пароль</label>
+    <input type="text" th:field="*{password}" id="password"/></p>
+
+    <p><label for="birthday_date">Дата рождения</label>
+    <input type="text" th:field="*{birthday_date}" id="birthday_date"/></p>
+
+    <p><label for="work_date">Дата приема на работу</label>
+    <input type="text" th:field="*{work_date}" id="work_date"/></p>
+
+    <p><label for="inn">Инн</label>
+    <input type="text" th:field="*{inn}" id="inn"/></p>
+
+    <p><label for="salary">Заработная плата (за месяц)</label>
+    <input type="text" th:field="*{salary}" id="salary"/></p>
+
+    <p><label for="mobile_number">Моб. телефон(+380-__-___-__-__)</label>
+    <input type="text" th:field="*{mobile_number}" id="mobile_number"/></p>
+
+    <p><label for="e_mail">Email</label>
+    <input type="text" th:field="*{e_mail}" id="e_mail"/></p>
+    <br>
+    <br>
+    <br>
+    <input type="submit" class='b1' value="Обновить данные сотрудника">
+    </div>
+</form>
+
+</body>
+</html>

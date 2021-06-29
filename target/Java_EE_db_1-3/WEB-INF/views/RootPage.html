@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Root Page</title>
+    <link th:href="@{/css/styleRootPage.css}" rel="stylesheet"/>
+</head>
+<body>
+<div class="center">
+    <form th:method="GET" th:action="@{/employee}">
+        <input type="submit" class="b1" value="Показать данные всех сотрудников">
+    </form>
+    <br>
+    <br>
+    <form th:method="GET" th:action="@{/employee/new}">
+        <input type="submit" class="b3" value="Создать новую запись">
+    </form>
+    <br>
+    <div class="center1">
+        <form th:method="POST" th:action="@{/employee/filter}" th:object="${filterEmployee}">
+            <div align="center">Сотрудники, которые проработали<br>
+                меньше указанного количества дней
+                <!--            <label for="total">дней</label>-->
+                <pre><input type="text" class="center2" pattern="([0-9]+)" th:field="*{total}" id="total" autofocus/></pre>
+            </div>
+            <input type="submit" class="b2" value="Показать сотрудников">
+        </form>
+        </form>
+    </div>
+</div>
+</body>
+</html>

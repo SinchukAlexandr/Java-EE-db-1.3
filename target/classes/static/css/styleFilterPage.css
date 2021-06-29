@@ -1,0 +1,62 @@
+
+b3 {
+    background: #d6d2d1;
+    height: 35px;
+    font-family: 'Arial';
+    font-size: 11pt;
+}
+
+.b4 {
+    background: #ffffff;
+    font-family: 'Arial';
+    font-size: 10pt;
+}
+
+.raz {
+    height: 22px;
+}
+
+.raz th {
+    position: sticky;
+    top: 0;
+    background: #d6d2d1;
+}
+
+table {
+    width: 95%; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+}
+
+td, th {
+    padding: 6px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid #ebe9e9; /* Параметры рамки */
+    align: center;
+}
+
+tbody tr:hover {
+    background: #f7f6f5; /* Цвет фона при наведении */
+    color: #050000; /* Цвет текста при наведении */
+    border: 1px;
+    solid: #ffffff;
+}
+
+.leftstr, .rightstr {
+    float: left; /* Обтекание справа */
+    width: 50%; /* Ширина текстового блока */
+}
+.rightstr {
+    text-align: right; /* Выравнивание по правому краю */
+}
+
+.text {
+    text-align: center;
+}
+
+#footer2 {
+    left: 0;
+    bottom: 0; /* Левый нижний угол */
+    padding: 1px; /* Поля вокруг текста */
+    background: #cecac8; /* Цвет фона */
+    color: #000000; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ShowAll</title>
+    <link th:href="@{/css/styleShowAll.css}" rel="stylesheet"/>
+</head>
+<!--<body bgcolor="#f7f6f5">-->
+<div>
+<h4>Тест</h4>
+<br>
+<br>
+<br>
+<div class=raz>
+    <table class=b4 align="center">
+        <tr class=b3 align="center">
+            <th align='center'>id</th>
+            <th>ФИО</th>
+            <th>Логин</th>
+            <th>Пароль</th>
+            <th>Дата рождения</th>
+            <th>Дата приема на работу</th>
+            <th>ИНН</th>
+            <th>Заработная плата</th>
+            <th>Номер телефона</th>
+            <th>Email</th>
+            <th>Возраст</th>
+            <th>Обновить данные</th>
+            <th>Удалить данные</th>
+        </tr>
+<!--</div>-->
+<div th:each="employee:${staff}">
+    <tr>
+        <td><a th:text="${employee.getId()}"></a></td>
+        <td><a th:text="${employee.getName()}"></a></td>
+        <td><a th:text="${employee.getLogin()}"></a></td>
+        <td><a th:text="${employee.getPassword()}"></a></td>
+        <td align="center"><a th:text="${employee.getBirthday_date()}"></a></td>
+        <td align="center"><a th:text="${employee.getWork_date()}"></a></td>
+        <td><a th:text="${employee.getInn()}"></a></td>
+        <td align="center"><a th:text="${employee.getSalary()}"></a></td>
+        <td><a th:text="${employee.getMobile_number()}"></a></td>
+        <td><a th:text="${employee.getE_mail()}"></a></td>
+        <td align="center"><a th:text="${employee.getAge()}"></a></td>
+        <td align="center">
+            <form th:action="@{/employee/{id}/update(id=${employee.getId()})}">
+                <button type="submit" class=b1 value="Обновить">Обновить
+                </button>
+            </form>
+        </td>
+        <td align="center">
+            <form th:method="GET" th:action="@{/employee/{id}/delete(id=${employee.getId()})}">
+                <button type="submit" class=b2 value="Удалить">Удалить
+                </button>
+            </form>
+        </td>
+    </tr>
+</div>
+</div>
+</table>
+</div>
+<div id="footer1">
+    <table class=b6>
+        <tr>
+            <td align="left"><br>
+                <form th:method="GET" th:action="@{/employee/exportSheetExcel}">
+                    <input type="submit" class=b5 value="Экспорт в Excel"></form>
+            </td>
+            <td align="center"><a th:href="@{/employee/root}">На главную</a></td>
+            <td align="right"><br>
+                <form th:method="GET" th:action="@{/employee/new}">
+                    <input type="submit" class=b5 value="Создать новую запись">
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>
+</div>
+<br>
+<br>
+<div id='footer2'>
+    <p class="leftstr"><b>Copyright© 2021</b> by Sinchuk </p>
+    <p class="rightstr"><b>Employee database</b>,
+        version 1.3</p>
+    <div style="clear: left"></div>
+</div>
+</body>
+</html>

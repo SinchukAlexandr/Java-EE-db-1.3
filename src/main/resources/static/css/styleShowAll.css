@@ -1,0 +1,135 @@
+/*bgcolor: #f7f6f5;*/
+/*h4{*/
+/*    color: #c43838;*/
+/*}*/
+/*body {*/
+/*    bgcolor:#f7f6f5;*/
+/*}*/
+
+
+.b1 {
+    border: 2px solid #00b259;
+    background: #aae6b3;
+    width: 80px;
+    color: black;
+    font-size: 9pt;
+    /*margin-top: 10px;*/
+}
+
+.b1:hover {
+    background-color: #3c6d24;
+    color: #fff;
+}
+
+.b2 {
+    border: 2px solid #e94239;
+    background: #ffbdbb;
+    width: 80px;
+    color: black;
+    font-size: 9pt;
+    /*margin-top: 10px;*/
+}
+
+.b2:hover {
+    background-color: #c43838;
+    color: #fff;
+}
+
+.b5 {
+    border: 2px solid #979797;
+    background: #d6d2d1;
+    color: black;
+    border-radius: 5px;
+    height: 30px;
+    width: 200px;
+    font-size: 10pt;
+    margin-right: 5px;
+}
+
+.b5:hover {
+    background-color: #979797;
+    color: #fff;
+}
+
+.b6 {
+    border: 0;
+    background: #f0efee;
+    width: 100%;
+    font-size: 9pt;
+}
+
+#footer1 {
+    position: fixed; /* Фиксированное положение */
+    left: 0;
+    top: 0; /* Левый нижний угол */
+    padding: 0; /* Поля вокруг текста */
+    background: #f0efee; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    height: 4.2em;
+    width: 100%; /* Ширина слоя */
+}
+
+#footer2 {
+    left: 0;
+    bottom: 0; /* Левый нижний угол */
+    padding: 1px; /* Поля вокруг текста */
+    background: #cecac8; /* Цвет фона */
+    color: #000000; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+}
+
+.leftstr, .rightstr {
+    float: left; /* Обтекание справа */
+    width: 50%; /* Ширина текстового блока */
+}
+
+.rightstr {
+    text-align: right; /* Выравнивание по правому краю */
+}
+
+.raz {
+    border: 0 solid #e2e0df;
+}
+
+.raz th {
+    position: sticky;
+    top: 4.3em;
+    background: #d6d2d1;
+    border: 1px solid #ffffff;
+}
+
+.b3 {
+    background: #d6d2d1;
+    height: 35px;
+    font-family: 'Arial';
+    font-size: 11pt;
+}
+
+.b4 {
+    background: #ffffff;
+    font-family: 'Arial';
+    font-size: 9pt;
+}
+
+.b4 tr:hover {
+    background: #f7f6f5; /* Цвет фона при наведении */
+    border: 1px solid #ebe9e9;
+    color: #050000; /* Цвет текста при наведении */
+    border: 1px solid #ffffff;
+}
+
+button {
+    width: 105px; /* Ширина кнопки */
+    height: 22px; /* Высота */
+    border-radius: 5px;
+}
+
+table {
+    width: 95%; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+}
+
+td, th {
+    padding: 6px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid #ebe9e9;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>FilterPage</title>
+    <link th:href="@{/css/styleFilterPage.css}" rel="stylesheet"/>
+</head>
+<body>
+<br>
+<div class=text>
+    <a th:href="@{/employee/root}">На главную</a>
+</div>
+<br>
+<br>
+<br>
+<div class=raz>
+    <table align='center' class='b4'>
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>ФИО</th>
+            <th>Логин</th>
+            <th>Пароль</th>
+            <th>Дата рождения</th>
+            <th>Дата приема на работу</th>
+            <th>ИНН</th>
+            <th>Заработная плата</th>
+            <th>Номер телефона</th>
+            <th>Email</th>
+            <th>Возраст</th>
+            <th>Количество отработанных дней</th>
+        </tr>
+        <tbody>
+        <div th:each="employeeFilter:${filter}">
+            <tr>
+                <td><a th:text="${employeeFilter.getId()}"></a></td>
+                <td><a th:text="${employeeFilter.getName()}"></a></td>
+                <td><a th:text="${employeeFilter.getLogin()}"></a></td>
+                <td><a th:text="${employeeFilter.getPassword()}"></a></td>
+                <td><a th:text="${employeeFilter.getBirthday_date()}"></a></td>
+                <td align="center"><a th:text="${employeeFilter.getWork_date()}"></a></td>
+                <td><a th:text="${employeeFilter.getInn()}"></a></td>
+                <td align="center"><a th:text="${employeeFilter.getSalary()}"></a></td>
+                <td><a th:text="${employeeFilter.getMobile_number()}"></a></td>
+                <td><a th:text="${employeeFilter.getE_mail()}"></a></td>
+                <td align="center"><a th:text="${employeeFilter.getAge()}"></a></td>
+                <td align="center"><a th:text="${employeeFilter.getTotal()}"></a></td>
+            </tr>
+        </div>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id=footer2>
+        <p class="leftstr"><b>Copyright© 2021</b> by Sinchuk </p>
+        <p class="rightstr"><b>Employee database</b>,
+        version 1.3</p>
+        <div style="clear: left"></div>
+    </div>
+</div>
+</body>
+</html>

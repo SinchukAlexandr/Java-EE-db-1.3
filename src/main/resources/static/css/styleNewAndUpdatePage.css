@@ -1,0 +1,46 @@
+body {
+    margin: 30px;
+    font-size: 12pt;
+}
+
+#name {
+    width: 380px;
+    font-family: Arial;
+}
+
+#birthday_date {
+    width: 144px;
+    font-family: Arial;
+}
+
+#work_date {
+    width: 144px;
+    font-family: Arial;
+}
+
+.b1 {
+    border: 2px solid #00b259;
+    background: #78c583;
+    color: black;
+    border-radius: 5px;
+    height: 35px;
+    width: 427px;
+    font-size: 12pt;
+}
+
+.b1:hover {
+    background-color: #3c6d24;
+    color: #fff;
+}
+
+.center {
+    font-family: Arial;
+    padding: 30px; /* Поля вокруг текста */
+    margin: auto; /* Выравниваем по центру */
+    background: #f7f6f5; /* Цвет фона */
+    border-style: solid;
+    border-color: #cecac8;
+    border-radius: 10px;
+    height: 458px;
+    width: 435px;
+}
